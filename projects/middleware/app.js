@@ -7,6 +7,15 @@ app.use((req,res,next)=>{
 	next()
 })
 
+app.use((req,res,next)=>{
+	if(req.query.api_key){
+		next()
+	}
+	else{
+		res.status(401).send({msg:'Not authorized to use this api'})
+	}
+})
+
 app.get('/',(req,res)=>{
 	res.send({msg:'hello world'})
 })
