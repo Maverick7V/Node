@@ -16,8 +16,8 @@ let profile=[{
 app.get('/profile',(req,res)=>{
 	console.log('get received')
 	if(req.query.id){
-		console.log(res.query.id)
-		return res.send(profile[res.query.id])
+		console.log('id:',req.query.id)
+		return res.send(profile[req.query.id])
 	}
 	res.send(profile)
 })
