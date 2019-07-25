@@ -14,10 +14,12 @@ let profile=[{
 
 
 app.get('/profile',(req,res)=>{
-	if(req.query.id)
+	console.log('get received')
+	if(req.query.id){
+		console.log(res.query.id)
 		return res.send(profile[res.query.id])
+	}
 	res.send(profile)
-
 })
 
 
