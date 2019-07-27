@@ -4,6 +4,7 @@ const bodyParser=require('body-parser')
 const morgan=require('morgan')
 
 app.use(bodyParser.json())
+
 app.use(morgan('dev'))
 
 app.use((req,res,next)=>{
