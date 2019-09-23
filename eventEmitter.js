@@ -1,7 +1,5 @@
 const eventEmitter=require('events')
- 
  class Job extends eventEmitter{
-
  }
 
  job=new Job()
